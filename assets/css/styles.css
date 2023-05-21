@@ -1,76 +1,172 @@
-/*=============== GOOGLE FONTS ===============*/
-/*=============== VARIABLES CSS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap");
 :root {
   --header-height: 3rem;
-  /*========== Colors ==========*/
+  /*========== Cores ==========*/
   --hue: 45;
   --sat: 98%;
-  --first-color: ;
-  --first-color-light: ;
-  --first-color-lighten: ;
-  --first-color-alt: ;
-  --title-color: ;
-  --text-color: ;
-  --text-color-light: ;
-  --body-color: ;
-  --container-color: ;
-  --scroll-bar-color: ;
-  --scroll-thumb-color: ;
-  /*========== Font and typography ==========*/
-  --body-font: ;
-  --biggest-font-size: ;
-  --h2-font-size: ;
-  --h3-font-size: ;
-  --normal-font-size: ;
-  --small-font-size: ;
-  --smaller-font-size: ;
-  /*========== Font weight ==========*/
-  --font-semi-bold: ;
-  --font-bold: ;
-  /*========== Margenes ==========*/
-  --mb-0-5: ;
-  --mb-0-75: ;
-  --mb-1: ;
-  --mb-1-5: ;
-  --mb-2: ;
-  /*========== z index ==========*/
-  --z-tooltip: ;
-  --z-fixed: ;
+  --first-color: hsl(var(--hue),var(--sat), 60%);
+  --first-color-light: hsl(var(--hue),var(--sat), 85%);
+  --first-color-lighten: hsl(var(--hue),var(--sat), 80%);
+  --first-color-alt: hsl(var(--hue),var(--sat), 53%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 65%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #fafafa;
+  --scroll-bar-color: hsl(var(--hue), 4%, 85%);
+  --scroll-thumb-color: hsl(var(--hue), 4%, 75%);
+  --body-font: "poppins", san-serif;
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .9rem;
+  --small-font-size: .8rem;
+  --smaller-font-size: .7rem;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
-
 @media screen and (min-width: 968px) {
   :root {
-    --biggest-font-size: ;
-    --h2-font-size: ;
-    --h3-font-size: ;
-    --normal-font-size: ;
-    --small-font-size: ;
-    --smaller-font-size: ;
+    --biggest-font-size: 3rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .87rem;
+    --smaller-font-size: .8rem;
   }
 }
 
-/*=============== BASE ===============*/
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: 0.5s;
+}
+
+h1, h2, h3 {
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 /*========== Button Dark/Light ==========*/
-/*=============== REUSABLE CSS CLASSES ===============*/
-/*=============== LAYOUT ===============*/
-/*=============== HEADER ===============*/
-/*=============== NAV ===============*/
-/* Show menu */
-/* Change background header */
+.section {
+  padding: 4.5rem 0 1rem;
+}
+.section__title, .section__title-center {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: var(--mb-1);
+}
+
+.svg__color {
+  fill: var(--first-color);
+}
+.svg__blob {
+  fill: var(--first-color-light);
+}
+.svg__img {
+  width: 300px;
+  justify-self: center;
+}
+
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  background-color: var(--body-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: 0.5s;
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    background-color: var(--container-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    padding: 2.5rem 0;
+    margin: 0 auto;
+    width: 90%;
+    top: -100%;
+    left: 0;
+    right: 0;
+    transition: 0.4s;
+    z-index: var(--z-fixed);
+  }
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+.nav__link, .nav__logo, .nav__toggle {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+.nav__toggle {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.show-menu {
+  top: calc(var(--header-height) + 1rem);
+}
+
 /*=============== HOME ===============*/
-/*=============== BUTTONS ===============*/
-/*=============== ABOUT ===============*/
-/*=============== SECURITY ===============*/
-/*=============== SERVICES ===============*/
-/*=============== APP ===============*/
-/*=============== CONTACT ===============*/
-/*=============== FOOTER ===============*/
-/*=============== SCROLL UP ===============*/
-/* Show Scroll Up*/
-/*=============== SCROLL BAR ===============*/
-/*=============== MEDIA QUERIES ===============*/
-/* For small devices */
-/* For medium devices */
-/* For large devices */
+.btn__header {
+  display: none;
+}

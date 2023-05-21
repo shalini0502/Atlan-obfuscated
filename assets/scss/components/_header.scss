@@ -11,7 +11,7 @@
 .nav{
     height: var(--header-height);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     &__menu{
@@ -22,11 +22,11 @@
             border-radius: 2rem;
             padding: 2.5rem 0;
             margin: 0 auto;
-            width: -100%;
-            top: 3rem;
+            width: 90%;
+            top: -100%;
             left: 0;
             right: 0;
-            transition: .2s;
+            transition: .4s;
             z-index: var(--z-fixed);
         }
     }
@@ -38,7 +38,9 @@
         row-gap: 1.5rem;
     }
 
-    &__link, &__logo, &__toggle{
+    &__link,
+    &__logo,
+    &__toggle{
         color: var(--title-color);
         font-weight: var(--font-semi-bold);
     }
@@ -47,4 +49,8 @@
         font-size: 1.3rem;
         cursor: pointer;
     }
+}
+
+.show-menu{
+    top: calc(var(--header-height) + 1rem);
 }
