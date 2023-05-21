@@ -4,7 +4,7 @@
   /*========== Cores ==========*/
   --hue: 45;
   --sat: 98%;
-  --first-color: hsl(var(--hue),var(--sat), 60%);
+  --first-color: #4CD6E5;
   --first-color-light: hsl(var(--hue),var(--sat), 85%);
   --first-color-lighten: hsl(var(--hue),var(--sat), 80%);
   --first-color-alt: hsl(var(--hue),var(--sat), 53%);
@@ -84,7 +84,7 @@ img {
 /*========== Variables Dark theme ==========*/
 /*========== Button Dark/Light ==========*/
 .section {
-  padding: 4.5rem 0 1rem;
+  padding: 4.5rem 1rem;
 }
 .section__title, .section__title-center {
   font-size: var(--h2-font-size);
@@ -166,7 +166,30 @@ img {
   top: calc(var(--header-height) + 1rem);
 }
 
-/*=============== HOME ===============*/
+.home__container {
+  row-gap: 3rem;
+}
+.home__title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-0-75);
+}
+.home__description {
+  margin-bottom: var(--mb-2);
+}
+
+.btn {
+  display: inline;
+  background-color: var(--first-color);
+  color: #232424;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3rem;
+  font-weight: var(--font-semi-bold);
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: var(--first-color-alt);
+}
 .btn__header {
   display: none;
-}
+}/*# sourceMappingURL=styles.css.map */

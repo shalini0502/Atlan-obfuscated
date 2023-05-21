@@ -1,4 +1,16 @@
 .btn{
+    display: inline;
+    background-color: var(--first-color);
+    color: #232424;
+    padding: .75rem 1.5rem;
+    border-radius: 3rem;
+    font-weight: var(--font-semi-bold);
+    transition: .3s;
+
+    &:hover{
+        background-color: var(--first-color-alt);
+    }
+
     &__header{
         display: none;
     }
