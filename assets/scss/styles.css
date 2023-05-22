@@ -4,10 +4,10 @@
   /*========== Cores ==========*/
   --hue: 45;
   --sat: 98%;
-  --first-color: #4CD6E5;
+  --first-color: #59d6e4;
   --first-color-light: hsl(var(--hue),var(--sat), 85%);
   --first-color-lighten: hsl(var(--hue),var(--sat), 80%);
-  --first-color-alt: hsl(var(--hue),var(--sat), 53%);
+  --first-color-alt: #07ddf5;
   --title-color: hsl(var(--hue), 4%, 15%);
   --text-color: hsl(var(--hue), 4%, 35%);
   --text-color-light: hsl(var(--hue), 4%, 65%);
@@ -80,9 +80,6 @@ img {
   height: auto;
 }
 
-/*=============== THEME ===============*/
-/*========== Variables Dark theme ==========*/
-/*========== Button Dark/Light ==========*/
 .section {
   padding: 4.5rem 1rem;
 }
@@ -192,4 +189,44 @@ img {
 }
 .btn__header {
   display: none;
+}
+.btn-link {
+  background: none;
+  padding: 0;
+  color: var(--title-color);
+}
+.btn-link:hover {
+  background-color: var(--mb-0-5);
+}
+
+.about__container {
+  gap: 2.5rem;
+}
+.about__data {
+  text-align: center;
+}
+
+.security__container {
+  gap: 2.5rem;
+}
+.security__description {
+  text-align: center;
+}
+
+.services__container {
+  padding-top: 1rem;
+}
+.services__data {
+  display: grid;
+  row-gap: 1rem;
+  background-color: var(--container-color);
+  box-shadow: 0 2px 6px hsla(var(--hue), 100%, 15%, 0.15);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.services__img {
+  width: 135px;
+  justify-self: center;
+  margin-bottom: var(--mb-0-5);
 }/*# sourceMappingURL=styles.css.map */
