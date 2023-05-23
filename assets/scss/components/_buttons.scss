@@ -21,7 +21,17 @@
         color: var(--title-color);
 
         &:hover{
-            background-color: var(--mb-0-5);
+            background-color: transparent;
         }
+    }
+    &-flex{
+        display: inline-flex;
+        align-items: center;
+        column-gap: .25rem;
+        padding: .75rem 1rem;
+    }
+
+    &__icons{
+        font-size: 1.5rem;
     }
 }

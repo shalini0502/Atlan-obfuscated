@@ -196,7 +196,17 @@ img {
   color: var(--title-color);
 }
 .btn-link:hover {
-  background-color: var(--mb-0-5);
+  background-color: transparent;
+}
+.btn-flex {
+  display: inline-flex;
+  align-items: center;
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+  padding: 0.75rem 1rem;
+}
+.btn__icons {
+  font-size: 1.5rem;
 }
 
 .about__container {
@@ -229,4 +239,20 @@ img {
   width: 135px;
   justify-self: center;
   margin-bottom: var(--mb-0-5);
+}
+
+.app__container {
+  gap: 2.5rem;
+}
+.app__data {
+  text-align: center;
+}
+.app__description {
+  margin-bottom: var(--mb-1-5);
+}
+.app__btns {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  gap: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
