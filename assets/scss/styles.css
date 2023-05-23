@@ -163,6 +163,24 @@ img {
   top: calc(var(--header-height) + 1rem);
 }
 
+.active-link {
+  position: relative;
+}
+.active-link::before {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 45%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--title-color);
+}
+
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
 .home__container {
   row-gap: 3rem;
 }
@@ -255,4 +273,90 @@ img {
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
   gap: 0.5rem;
+}
+
+.contact__container {
+  padding-bottom: 3rem;
+}
+.contact__description {
+  text-align: center;
+}
+.contact__content {
+  row-gap: 0.75rem;
+}
+.contact__address {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+.contact__information {
+  font-weight: initial;
+  color: var(--title-color);
+}
+
+.footer {
+  background-color: var(--first-color-lighten);
+  padding-bottom: 2rem;
+}
+.footer__container {
+  row-gap: 2rem;
+}
+.footer__logo, .footer__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+.footer__logo {
+  display: inline-block;
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+.footer__description, .footer__link {
+  font-size: var(--small-font-size);
+}
+.footer__links {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.footer__link {
+  color: var(--title-color);
+}
+.footer__social {
+  display: flex;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+.footer__social-link {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+.footer__copy {
+  margin-top: 6rem;
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+}
+
+.scrollup {
+  position: fixed;
+  background-color: var(--first-color);
+  right: 1rem;
+  bottom: -20%;
+  display: inline-flex;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  z-index: var(--z-tooltip);
+  opacity: 0.8;
+  transition: 0.4s;
+}
+.scrollup:hover {
+  background-color: var(--first-color);
+  opacity: 1;
+}
+.scrollup__icon {
+  font-size: 1.25rem;
+  color: var(-title-color);
+}
+
+.show-scroll {
+  bottom: 3rem;
 }/*# sourceMappingURL=styles.css.map */

@@ -54,3 +54,22 @@
 .show-menu{
     top: calc(var(--header-height) + 1rem);
 }
+
+.active-link{
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -.75rem;
+        left: 45%;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: var(--title-color);
+    }
+}
+
+.scroll-header{
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1); 
+}
