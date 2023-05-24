@@ -24,3 +24,9 @@
 .show-scroll{
     bottom: 3rem;
 }
+
+::-webkit-scrollbar{
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: var(--scroll-bar-color);
+}
