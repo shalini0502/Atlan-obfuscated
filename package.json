@@ -1,0 +1,11 @@
+{
+  "name": "responsive-website-delivery",
+  "version": "1.0.0",
+  "description": "![preview](https://github.com/Luuan11/responsive-website-delivery/assets/79935555/3871fc34-6488-4002-baa5-39ad2f6c551d)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
